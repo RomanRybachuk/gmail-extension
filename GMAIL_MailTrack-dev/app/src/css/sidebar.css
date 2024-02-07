@@ -1,0 +1,69 @@
+.sidebar_section1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.add_note_input {
+    background-color: rgb(236, 239, 248);
+    width: 285px;
+    height: 40px; 
+    padding: 10px; 
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: height 0.3s ease; 
+    border-radius: 5px;
+    overflow: auto;
+    resize: none; 
+    font-size:large;
+  }
+
+  .add_note_input::-webkit-scrollbar {
+    display: none;
+}
+  
+  /* .add_note_input:hover {
+    background-color: rgb(200, 203, 215);
+  } */
+
+  .add_note_input.editing {
+    height: 120px;
+  }
+
+  .textarea_buttons_box{
+    width: 280px;
+    /* border: 1px solid red; */
+    padding: 5px 0 0 0;
+    display: flex;
+    justify-content:end;
+    align-items: center; 
+  }
+
+  .cancel_button{
+    font-size: 16px;
+      width: 55px;
+      height: 30px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      margin-right: 20px;
+    }
+    
+  .save_button{
+      background-color: rgb(24,110,226);
+      font-size: 16px;
+      width: 55px;
+      height: 30px;
+      border-radius: 5px;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .notes_div{
+      width:100%;
+      height: 50px;
+      border: 1px solid white;
+    }
