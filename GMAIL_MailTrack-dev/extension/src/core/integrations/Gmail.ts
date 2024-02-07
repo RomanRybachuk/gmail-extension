@@ -75,8 +75,13 @@ export default class GmailIntegration {
     
 
     //Analytic button
-    const navigator = document.querySelector("[role='navigation'] [aria-labelledby]");
-    // console.log("navigator", navigator);
+    let navigator = document.querySelector("[role='navigation'] [aria-labelledby]");
+    
+    if (!navigator)
+      navigator = document.querySelector(
+        "[role='navigation'] + div [aria-labelledby]"
+      );
+    
     if (navigator && !navigator.getAttribute("data-extension-detected")) {
       navigator.setAttribute("data-extension-detected", "true");
       const analytic_button = new AnalyticButton(navigator, "beforeend");
